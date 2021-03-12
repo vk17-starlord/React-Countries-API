@@ -108,7 +108,7 @@ Search(event.target.value)
 
 </div>
 
-<Card data={data} theme />
+<Card data={data} theme={theme} />
 
  
 

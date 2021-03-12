@@ -1,6 +1,7 @@
 import React from 'react'
 import Innercard from './Innercard'
 function Card({data,theme}) {
+    console.log(theme,'theme')
     return (
         <div className="card-container">
             <div className="container row ">
