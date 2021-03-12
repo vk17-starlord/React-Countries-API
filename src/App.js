@@ -82,24 +82,23 @@ setdata(result.data);
   
   
   return (
-    <div className="main-container">
-
+    <div  className={theme=='Dark'? 'dark-bg': 'light-bg'}>
 <Navbar theme={theme} toggle={themeToggler} />
 
 <div className="container filter-container row">
 
 <div className="col-sm-12 col-lg-5 flex-column a-end d-flex justify-content-start align-items-end ">
-<input type="text" placeholder="Search for a country" value={searchtxt} onKeyUp={(event)=>{
+<input type="text" className={theme=='Dark'? 'dark-ele': ''} placeholder="Search for a country" value={searchtxt} onKeyUp={(event)=>{
  
 console.log(event.target.value)
 Search(event.target.value)
 }}/>  
 </div>
 
-<div className="col-sm-12 col-lg-7 flex-column a-end d-flex justify-content-start align-items-end ">
- <button onClick={menuToggler} >{Currentregion===null ? <span>Filter By Region</span> : <span>{Currentregion}</span>} {menu==='open' ? < AiFillCaretDown/> :  <AiFillCaretUp/> } </button>
+<div  className={theme=='Dark'? 'dark-bg col-sm-12 col-lg-7 flex-column a-end d-flex justify-content-start align-items-end': 'light-bg col-sm-12 col-lg-7 flex-column a-end d-flex justify-content-start align-items-end'}  >
+ <button className={theme=='Dark'? 'dark-ele': ''} onClick={menuToggler} >{Currentregion===null ? <span>Filter By Region</span> : <span>{Currentregion}</span>} {menu==='open' ? < AiFillCaretDown/> :  <AiFillCaretUp/> } </button>
 {menu==='open' ?
- <div className="region">
+ <div  className={theme=='Dark'? 'region dark-ele': 'region'}>
 {region.map((region,index)=>(
   <li className="region-li" key={index} onClick={()=>{
   Filter(region)
@@ -110,7 +109,7 @@ Search(event.target.value)
 
 </div>
 
-<Card data={data} />
+<Card data={data} theme={theme} />
 
  
 

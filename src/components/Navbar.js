@@ -6,9 +6,9 @@ function Navbar({toggle,theme}) {
 
     return (
 
-        <div className="navbar" >
+        <div  className={theme=='Dark'? 'navbar dark-bg': 'navbar'} >
 
-<div className="container">
+<div  className={theme=='Dark'? 'container dark-bg': 'container'}>
   <h1>  Where in the world ?</h1>
   <button onClick={toggle}> {theme==='Dark'?<HiMoon /> :<HiOutlineMoon  /> } {theme} Mode </button>
 </div>
