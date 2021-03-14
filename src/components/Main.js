@@ -5,8 +5,7 @@ import {useState,useEffect,useContext} from 'react';
 import axios from 'axios';
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 import Card from "./Card";
-import React, { Component } from 'react';
-import {ThemeProvider} from './ThemeProvider';
+import React from 'react';
 import {ThemeContext,ThemeUpdateContext} from './ThemeProvider';
 
 

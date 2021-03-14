@@ -1,14 +1,12 @@
 import React,{useContext} from 'react'
 import Navbar from './Navbar'
-import {ThemeContext,ThemeUpdateContext} from './ThemeProvider';
+import {ThemeContext} from './ThemeProvider';
 
-function Carddetail({country}) {
+function Carddetail() {
     const theme = useContext(ThemeContext)
- 
 
-    const themeToggler = useContext(ThemeUpdateContext)
     return (
-        <div>
+        <div className={theme==='Dark'? 'dark d-container' :'light d-container'}>
 <Navbar  ></Navbar>
             <h1>card detail</h1>
         </div>

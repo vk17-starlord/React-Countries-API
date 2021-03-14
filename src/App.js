@@ -1,7 +1,7 @@
 
 import './App.css';
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 import Carddetail from './components/Carddetail';
 import Main from './components/Main'
 import {ThemeProvider }from './components/ThemeProvider';
