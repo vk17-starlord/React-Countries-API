@@ -12,24 +12,25 @@ Link,
 
   function Carddetail() {
     const theme = useContext(ThemeContext)
-     const {name} = useParams();
+  
      
      let [country, setcountry] = useState({languages:[],currencies:[],borders:[]});
 
 
-    async function getCountry() {
-              const data = await axios(`https://restcountries.eu/rest/v2/name/${name}?fullText=true`)
-     
-  setcountry(data.data[0]);
-      
-console.log(data.data[0])
-}
+     const {name} = useParams();
+
 
      useEffect(() =>{
-
+        async function getCountry() {
+            const data = await axios(`https://restcountries.eu/rest/v2/name/${name}?fullText=true`)
+   
+setcountry(data.data[0]);
+    
+console.log(data.data[0])
+}
     getCountry()
   
-},[])
+},[name])
 
 
      return (
