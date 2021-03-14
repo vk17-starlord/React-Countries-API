@@ -11,9 +11,10 @@ $verylightgrey: hsl(0, 0%, 98%);
     font-family: 'Nunito Sans', sans-serif !important;
     padding:0;
     margin: 0;
+
  }
 
  body{
    background-color: $verylightgrey;
-
- }
+    padding:0 !important;
+margin: 0 !important; }

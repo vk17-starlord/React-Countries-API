@@ -13,10 +13,10 @@ function App() {
 
   return (
  <ThemeProvider>
-     
-            <Switch>
+       
+             <Switch> 
                 <Route path="/" component={Main} exact />
-                <Route path="/:country" component={Carddetail} />
+                <Route path="/:name" component={Carddetail} />
             </Switch>
   
     </ThemeProvider>
