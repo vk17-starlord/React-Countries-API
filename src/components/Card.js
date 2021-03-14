@@ -1,6 +1,6 @@
 import React from 'react'
 import Innercard from './Innercard'
-function Card({data,theme}) {
+function Card({data,theme,toggle}) {
     console.log(theme,'theme')
     return (
         <div className="card-container">
@@ -8,7 +8,7 @@ function Card({data,theme}) {
                 {data.map((country,index)=>(
                     <div className='card col-sm-12 col-md-4 col-lg-3' >
 
-<Innercard key={index} country={country} theme={theme} />
+<Innercard toggle={toggle} key={index} country={country} theme={theme} />
 
 
                     </div>

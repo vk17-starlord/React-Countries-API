@@ -154,6 +154,7 @@ textarea:focus, input:focus, *:focus {
   width: 100%;
   min-height: 100vh;
   margin: 20px 0;
+  margin-bottom: 0 !important;
 }
 
 .card {
@@ -167,12 +168,18 @@ textarea:focus, input:focus, *:focus {
 .i-card {
   background-color: white;
   border-radius: 5px;
+  color: black;
+  text-decoration: none !important;
   -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.04), 0 -6.7px 5.3px rgba(0, 0, 0, 0.02);
           box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.04), 0 -6.7px 5.3px rgba(0, 0, 0, 0.02);
   margin: 0 auto;
   width: 95%;
   min-height: 300px;
   padding-bottom: 20px;
+}
+
+.i-card:hover {
+  text-decoration: none !important;
 }
 
 .i-card h4 {

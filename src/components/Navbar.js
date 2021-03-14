@@ -1,8 +1,14 @@
-import React from 'react'
+import React ,{useContext} from 'react'
 import {HiMoon } from "react-icons/hi";
 import {HiOutlineMoon } from "react-icons/hi";
-function Navbar({toggle,theme}) {
+import {ThemeContext,ThemeUpdateContext} from './ThemeProvider';
 
+function Navbar() {
+
+  const theme = useContext(ThemeContext)
+ 
+
+  const themeToggler = useContext(ThemeUpdateContext)
 
     return (
 
@@ -10,7 +16,7 @@ function Navbar({toggle,theme}) {
 
 <div  className={theme==='Dark'? 'container dark-bg': 'container'}>
   <h1>  Where in the world ?</h1>
-  <button onClick={toggle}> {theme==='Dark'?<HiMoon /> :<HiOutlineMoon  /> } {theme} Mode </button>
+  <button onClick={themeToggler}> {theme==='Dark'?<HiMoon /> :<HiOutlineMoon  /> } {theme} Mode </button>
 </div>
         </div>
     )

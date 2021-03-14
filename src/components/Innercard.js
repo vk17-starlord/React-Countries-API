@@ -1,8 +1,13 @@
-import React from 'react'
+import React ,{useContext} from 'react'
+import {ThemeContext} from './ThemeProvider';
 
-function Innercard({country,theme}) {
-    console.log(theme)
+import { Link } from 'react-router-dom';
+function Innercard({country}) {
+   
+  const theme = useContext(ThemeContext)
+
     return (
+     <Link to={`/${country.name}`}>
         <div className={theme==='Dark'? 'i-card dark-ele': 'i-card'}>
             <img src={country.flag} alt={country.name} />
       <div className="i-text">
@@ -13,6 +18,7 @@ function Innercard({country,theme}) {
 
       </div>
         </div>
+     </Link>
     )
 }
 
